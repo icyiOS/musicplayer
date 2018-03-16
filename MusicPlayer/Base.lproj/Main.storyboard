@@ -12,7 +12,7 @@
         <!--Music-->
         <scene sceneID="5S7-Nj-ohP">
             <objects>
-                <collectionViewController id="cVk-8h-0CF" sceneMemberID="viewController">
+                <collectionViewController id="cVk-8h-0CF" customClass="MusicVC" customModule="MusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Qw6-82-ZVH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,13 +24,71 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aKj-MA-P7j">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="promotionCell" id="aKj-MA-P7j" customClass="PromotionCell" customModule="MusicPlayer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promotion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQJ-Yc-VM0">
+                                            <rect key="frame" x="147.5" y="71" width="79" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </view>
+                                <color key="backgroundColor" red="0.99934658899999995" green="0.64043490400000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="xQJ-Yc-VM0" firstAttribute="centerX" secondItem="aKj-MA-P7j" secondAttribute="centerX" id="wfR-ih-EfC"/>
+                                    <constraint firstItem="xQJ-Yc-VM0" firstAttribute="centerY" secondItem="aKj-MA-P7j" secondAttribute="centerY" id="zII-FU-DSr"/>
+                                </constraints>
+                                <size key="customSize" width="375" height="163"/>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="buttonCell" id="Cie-gV-VBc">
+                                <rect key="frame" x="0.0" y="210" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPr-KQ-LJF">
+                                            <rect key="frame" x="24.5" y="40" width="51" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="0.97647058959999999" green="0.85098040100000005" blue="0.54901963470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="SPr-KQ-LJF" firstAttribute="centerX" secondItem="Cie-gV-VBc" secondAttribute="centerX" id="Gh3-ni-Bzd"/>
+                                    <constraint firstItem="SPr-KQ-LJF" firstAttribute="centerY" secondItem="Cie-gV-VBc" secondAttribute="centerY" id="nqM-hI-Rpv"/>
+                                </constraints>
+                                <size key="customSize" width="100" height="100"/>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="albumCell" id="Zyb-g7-ZJY">
+                                <rect key="frame" x="110" y="173" width="130" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="130" height="174"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQy-ip-RGR">
+                                            <rect key="frame" x="40.5" y="76.5" width="49" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="SQy-ip-RGR" firstAttribute="centerX" secondItem="Zyb-g7-ZJY" secondAttribute="centerX" id="wu6-on-jwk"/>
+                                    <constraint firstItem="SQy-ip-RGR" firstAttribute="centerY" secondItem="Zyb-g7-ZJY" secondAttribute="centerY" id="xuW-Ac-R03"/>
+                                </constraints>
+                                <size key="customSize" width="130" height="174"/>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -42,7 +100,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AfM-3F-vto" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="-367"/>
+            <point key="canvasLocation" x="1200.8" y="-367.46626686656674"/>
         </scene>
         <!--music-->
         <scene sceneID="ktX-Eq-yR4">
