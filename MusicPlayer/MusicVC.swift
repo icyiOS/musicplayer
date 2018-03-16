@@ -35,6 +35,14 @@ class MusicVC: UICollectionViewController {
 
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "pushAlbum" {
+            guard let destination = segue.destination as? AlbumVC else { return }
+            guard let album = sender as? Album else { return }
+            destination.album = album
+        }
+    }
+
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -76,6 +84,18 @@ class MusicVC: UICollectionViewController {
             fatalError()
         }
         return cell
+    }
+
+    // MARK: UICollectionViewDelegate
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 2:
+            if let data = fileData?.albums[indexPath.row] {
+                performSegue(withIdentifier: "pushAlbum", sender: data)
+            }
+        default:
+            break
+        }
     }
 
 }

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Music-->
+        <!--音乐-->
         <scene sceneID="5S7-Nj-ohP">
             <objects>
                 <collectionViewController id="cVk-8h-0CF" customClass="MusicVC" customModule="MusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,20 +112,53 @@
                             <outlet property="delegate" destination="cVk-8h-0CF" id="FRh-tn-n96"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Music" id="7el-zD-UEx"/>
+                    <navigationItem key="navigationItem" title="音乐" id="7el-zD-UEx"/>
+                    <connections>
+                        <segue destination="tAl-31-tfQ" kind="show" identifier="pushAlbum" id="9mZ-Ku-oHG"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AfM-3F-vto" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1200.8" y="-367.46626686656674"/>
         </scene>
-        <!--music-->
+        <!--专辑-->
+        <scene sceneID="9ig-CH-Lo8">
+            <objects>
+                <tableViewController id="tAl-31-tfQ" customClass="AlbumVC" customModule="MusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="45c-6M-5vI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aTA-at-0a1">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aTA-at-0a1" id="e5y-5z-CAM">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tAl-31-tfQ" id="F28-yp-h87"/>
+                            <outlet property="delegate" destination="tAl-31-tfQ" id="UvS-Qi-mn8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="专辑" id="08J-t7-nca"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tr7-aO-1sG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2113" y="-367"/>
+        </scene>
+        <!--音乐-->
         <scene sceneID="ktX-Eq-yR4">
             <objects>
                 <navigationController id="0X0-Ki-saL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="music" image="music" id="oEW-s8-hcU"/>
+                    <tabBarItem key="tabBarItem" title="音乐" image="music" id="oEW-s8-hcU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nwu-6q-ZPO">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.4039215686" green="0.2274509804" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -139,7 +172,7 @@
             </objects>
             <point key="canvasLocation" x="454" y="-367"/>
         </scene>
-        <!--Me-->
+        <!--账号-->
         <scene sceneID="wND-2H-I8C">
             <objects>
                 <tableViewController id="Snh-Gx-dd4" sceneMemberID="viewController">
@@ -162,17 +195,17 @@
                             <outlet property="delegate" destination="Snh-Gx-dd4" id="0EV-yC-g5i"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Me" id="6lQ-Xh-iGc"/>
+                    <navigationItem key="navigationItem" title="账号" id="6lQ-Xh-iGc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7He-gZ-e9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1190" y="345"/>
         </scene>
-        <!--me-->
+        <!--账号-->
         <scene sceneID="MLg-gn-so3">
             <objects>
                 <navigationController id="gBj-ka-f41" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="me" image="me" id="p1q-BV-maq"/>
+                    <tabBarItem key="tabBarItem" title="账号" image="me" id="p1q-BV-maq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nx7-tV-gol">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
