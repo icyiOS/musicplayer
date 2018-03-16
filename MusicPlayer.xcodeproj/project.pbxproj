@@ -17,6 +17,8 @@
 		1F38873F205BA9AF005BA2E3 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38873E205BA9AF005BA2E3 /* ButtonCell.swift */; };
 		1F388741205BA9B9005BA2E3 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F388740205BA9B9005BA2E3 /* AlbumCell.swift */; };
 		1F388743205BC483005BA2E3 /* Static.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F388742205BC483005BA2E3 /* Static.xcassets */; };
+		1FB89F3A205BF047008D947C /* albums.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FB89F39205BF046008D947C /* albums.json */; };
+		1FB89F3C205BF093008D947C /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB89F3B205BF093008D947C /* Album.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		1F38873E205BA9AF005BA2E3 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		1F388740205BA9B9005BA2E3 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		1F388742205BC483005BA2E3 /* Static.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Static.xcassets; sourceTree = "<group>"; };
+		1FB89F39205BF046008D947C /* albums.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = albums.json; sourceTree = "<group>"; };
+		1FB89F3B205BF093008D947C /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 			isa = PBXGroup;
 			children = (
 				1F1BC0C5205B68A700D8CFBE /* AppDelegate.swift */,
+				1FB89F39205BF046008D947C /* albums.json */,
+				1FB89F3B205BF093008D947C /* Album.swift */,
 				1F1BC0C7205B68A700D8CFBE /* ViewController.swift */,
 				1F38873A205BA7A6005BA2E3 /* MusicVC.swift */,
 				1F38873C205BA9A3005BA2E3 /* PromotionCell.swift */,
@@ -140,6 +146,7 @@
 			files = (
 				1F1BC0D0205B68A700D8CFBE /* LaunchScreen.storyboard in Resources */,
 				1F1BC0CD205B68A700D8CFBE /* Assets.xcassets in Resources */,
+				1FB89F3A205BF047008D947C /* albums.json in Resources */,
 				1F1BC0CB205B68A700D8CFBE /* Main.storyboard in Resources */,
 				1F388743205BC483005BA2E3 /* Static.xcassets in Resources */,
 			);
@@ -157,6 +164,7 @@
 				1F1BC0C6205B68A700D8CFBE /* AppDelegate.swift in Sources */,
 				1F38873F205BA9AF005BA2E3 /* ButtonCell.swift in Sources */,
 				1F38873B205BA7A6005BA2E3 /* MusicVC.swift in Sources */,
+				1FB89F3C205BF093008D947C /* Album.swift in Sources */,
 				1F388741205BA9B9005BA2E3 /* AlbumCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

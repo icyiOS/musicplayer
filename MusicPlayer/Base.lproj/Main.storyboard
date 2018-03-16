@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -69,27 +70,41 @@
                                     <outlet property="label" destination="kQZ-d1-oaZ" id="PQR-Gr-Xrh"/>
                                 </connections>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="albumCell" id="Zyb-g7-ZJY">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="albumCell" id="Zyb-g7-ZJY" customClass="AlbumCell" customModule="MusicPlayer" customModuleProvider="target">
                                 <rect key="frame" x="110" y="96" width="130" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="130" height="174"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQy-ip-RGR">
-                                            <rect key="frame" x="40.5" y="76.5" width="49" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5gU-V8-b9h">
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="5gU-V8-b9h" secondAttribute="height" multiplier="1:1" id="IWR-4D-soY"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYM-x5-VKs">
+                                            <rect key="frame" x="6" y="130" width="118" height="44"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </view>
-                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="SQy-ip-RGR" firstAttribute="centerX" secondItem="Zyb-g7-ZJY" secondAttribute="centerX" id="wu6-on-jwk"/>
-                                    <constraint firstItem="SQy-ip-RGR" firstAttribute="centerY" secondItem="Zyb-g7-ZJY" secondAttribute="centerY" id="xuW-Ac-R03"/>
+                                    <constraint firstItem="5gU-V8-b9h" firstAttribute="leading" secondItem="Zyb-g7-ZJY" secondAttribute="leading" id="F9g-7i-1uk"/>
+                                    <constraint firstItem="5gU-V8-b9h" firstAttribute="top" secondItem="Zyb-g7-ZJY" secondAttribute="top" id="IBJ-X7-6vO"/>
+                                    <constraint firstItem="FYM-x5-VKs" firstAttribute="top" secondItem="5gU-V8-b9h" secondAttribute="bottom" id="NAQ-Fb-qUZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="FYM-x5-VKs" secondAttribute="bottom" id="NkF-IO-sxj"/>
+                                    <constraint firstAttribute="trailing" secondItem="FYM-x5-VKs" secondAttribute="trailing" constant="6" id="i16-1j-uCM"/>
+                                    <constraint firstAttribute="trailing" secondItem="5gU-V8-b9h" secondAttribute="trailing" id="oLR-A5-ufB"/>
+                                    <constraint firstItem="FYM-x5-VKs" firstAttribute="leading" secondItem="Zyb-g7-ZJY" secondAttribute="leading" constant="6" id="rlJ-wN-Lfa"/>
                                 </constraints>
                                 <size key="customSize" width="130" height="174"/>
+                                <connections>
+                                    <outlet property="imageView" destination="5gU-V8-b9h" id="osL-5T-4UT"/>
+                                    <outlet property="label" destination="FYM-x5-VKs" id="dRj-7X-177"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

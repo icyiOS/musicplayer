@@ -14,8 +14,25 @@ private let albumReuseIdentifier = "albumCell"
 
 class MusicVC: UICollectionViewController {
 
+    var fileData: FileRoot? {
+        didSet {
+            collectionView?.reloadSections([2])
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        if let path = Bundle.main.path(forResource: "albums", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let decoder = JSONDecoder()
+                fileData = try decoder.decode(FileRoot.self, from: data)
+            } catch {
+                print("parse error")
+            }
+        }
+
     }
 
     // MARK: UICollectionViewDataSource
@@ -31,7 +48,7 @@ class MusicVC: UICollectionViewController {
         case 1:
             return 4
         case 2:
-            return 21
+            return fileData?.albums.count ?? 0
         default:
             return 0
         }
@@ -50,6 +67,11 @@ class MusicVC: UICollectionViewController {
             }
         case 2:
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: albumReuseIdentifier, for: indexPath)
+            if let cell = cell as? AlbumCell,
+                let data = fileData?.albums[indexPath.row] {
+                cell.imageView.image = UIImage(named: data.cover)
+                cell.label.text = data.name
+            }
         default:
             fatalError()
         }
