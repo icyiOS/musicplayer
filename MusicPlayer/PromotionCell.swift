@@ -27,7 +27,6 @@ class PromotionCell: UICollectionViewCell {
     let pageControl = UIPageControl()
 
     override func awakeFromNib() {
-        pageViewController.view.backgroundColor = UIColor.yellow
         contentView.addSubview(pageViewController.view)
         pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
         pageViewController.view.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true

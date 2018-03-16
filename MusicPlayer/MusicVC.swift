@@ -44,6 +44,10 @@ class MusicVC: UICollectionViewController {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: promotionReuseIdentifier, for: indexPath)
         case 1:
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: buttonReuseIdentifier, for: indexPath)
+            if let cell = cell as? ButtonCell,
+                let cellType = ButtonCell.ButtonType(rawValue: indexPath.row) {
+                cell.type = cellType
+            }
         case 2:
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: albumReuseIdentifier, for: indexPath)
         default:
