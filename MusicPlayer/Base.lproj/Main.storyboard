@@ -25,29 +25,16 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="promotionCell" id="aKj-MA-P7j" customClass="PromotionCell" customModule="MusicPlayer" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promotion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQJ-Yc-VM0">
-                                            <rect key="frame" x="147.5" y="71" width="79" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </view>
-                                <color key="backgroundColor" red="0.99934658899999995" green="0.64043490400000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="xQJ-Yc-VM0" firstAttribute="centerX" secondItem="aKj-MA-P7j" secondAttribute="centerX" id="wfR-ih-EfC"/>
-                                    <constraint firstItem="xQJ-Yc-VM0" firstAttribute="centerY" secondItem="aKj-MA-P7j" secondAttribute="centerY" id="zII-FU-DSr"/>
-                                </constraints>
-                                <size key="customSize" width="375" height="163"/>
+                                <size key="customSize" width="375" height="86"/>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="buttonCell" id="Cie-gV-VBc">
-                                <rect key="frame" x="0.0" y="210" width="100" height="100"/>
+                                <rect key="frame" x="0.0" y="133" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -69,7 +56,7 @@
                                 <size key="customSize" width="100" height="100"/>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="albumCell" id="Zyb-g7-ZJY">
-                                <rect key="frame" x="110" y="173" width="130" height="174"/>
+                                <rect key="frame" x="110" y="96" width="130" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="130" height="174"/>
