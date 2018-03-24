@@ -10,7 +10,6 @@
 		1F1BC0C6205B68A700D8CFBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BC0C5205B68A700D8CFBE /* AppDelegate.swift */; };
 		1F1BC0C8205B68A700D8CFBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BC0C7205B68A700D8CFBE /* ViewController.swift */; };
 		1F1BC0CB205B68A700D8CFBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1BC0C9205B68A700D8CFBE /* Main.storyboard */; };
-		1F1BC0CD205B68A700D8CFBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F1BC0CC205B68A700D8CFBE /* Assets.xcassets */; };
 		1F1BC0D0205B68A700D8CFBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1BC0CE205B68A700D8CFBE /* LaunchScreen.storyboard */; };
 		1F38873B205BA7A6005BA2E3 /* MusicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38873A205BA7A6005BA2E3 /* MusicVC.swift */; };
 		1F38873D205BA9A3005BA2E3 /* PromotionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38873C205BA9A3005BA2E3 /* PromotionCell.swift */; };
@@ -20,6 +19,8 @@
 		1FB89F3A205BF047008D947C /* albums.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FB89F39205BF046008D947C /* albums.json */; };
 		1FB89F3C205BF093008D947C /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB89F3B205BF093008D947C /* Album.swift */; };
 		1FB89F3E205BF69D008D947C /* AlbumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB89F3D205BF69D008D947C /* AlbumVC.swift */; };
+		2840E4572066768200E64D18 /* PlaySongVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840E4562066768200E64D18 /* PlaySongVC.swift */; };
+		2840E45920667D7300E64D18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2840E45820667D6800E64D18 /* Assets.xcassets */; };
 		284E7BFF205D592400C67B1F /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E7BFE205D592400C67B1F /* SongCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +29,6 @@
 		1F1BC0C5205B68A700D8CFBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F1BC0C7205B68A700D8CFBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1F1BC0CA205B68A700D8CFBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1F1BC0CC205B68A700D8CFBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F1BC0CF205B68A700D8CFBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F1BC0D1205B68A700D8CFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F38873A205BA7A6005BA2E3 /* MusicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVC.swift; sourceTree = "<group>"; };
@@ -39,6 +39,8 @@
 		1FB89F39205BF046008D947C /* albums.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = albums.json; sourceTree = "<group>"; };
 		1FB89F3B205BF093008D947C /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		1FB89F3D205BF69D008D947C /* AlbumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumVC.swift; sourceTree = "<group>"; };
+		2840E4562066768200E64D18 /* PlaySongVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySongVC.swift; sourceTree = "<group>"; };
+		2840E45820667D6800E64D18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = /Users/icylydia/Documents/iOSClass/musicplayer/MusicPlayer/Assets.xcassets; sourceTree = "<absolute>"; };
 		284E7BFE205D592400C67B1F /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,8 +84,9 @@
 				1F388740205BA9B9005BA2E3 /* AlbumCell.swift */,
 				1FB89F3D205BF69D008D947C /* AlbumVC.swift */,
 				284E7BFE205D592400C67B1F /* SongCell.swift */,
+				2840E4562066768200E64D18 /* PlaySongVC.swift */,
 				1F1BC0C9205B68A700D8CFBE /* Main.storyboard */,
-				1F1BC0CC205B68A700D8CFBE /* Assets.xcassets */,
+				2840E45820667D6800E64D18 /* Assets.xcassets */,
 				1F388742205BC483005BA2E3 /* Static.xcassets */,
 				1F1BC0CE205B68A700D8CFBE /* LaunchScreen.storyboard */,
 				1F1BC0D1205B68A700D8CFBE /* Info.plist */,
@@ -151,10 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F1BC0D0205B68A700D8CFBE /* LaunchScreen.storyboard in Resources */,
-				1F1BC0CD205B68A700D8CFBE /* Assets.xcassets in Resources */,
 				1FB89F3A205BF047008D947C /* albums.json in Resources */,
 				1F1BC0CB205B68A700D8CFBE /* Main.storyboard in Resources */,
 				1F388743205BC483005BA2E3 /* Static.xcassets in Resources */,
+				2840E45920667D7300E64D18 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F1BC0C8205B68A700D8CFBE /* ViewController.swift in Sources */,
+				2840E4572066768200E64D18 /* PlaySongVC.swift in Sources */,
 				1F38873D205BA9A3005BA2E3 /* PromotionCell.swift in Sources */,
 				1FB89F3E205BF69D008D947C /* AlbumVC.swift in Sources */,
 				1F1BC0C6205B68A700D8CFBE /* AppDelegate.swift in Sources */,
