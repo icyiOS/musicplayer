@@ -520,12 +520,8 @@
                                                 <constraint firstItem="ogm-SD-brn" firstAttribute="leading" secondItem="NER-0E-4EZ" secondAttribute="trailing" id="zty-8E-mYW"/>
                                             </constraints>
                                         </view>
-                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aYL-Jt-Ljt">
-                                            <rect key="frame" x="40" y="529" width="295" height="2"/>
-                                            <color key="progressTintColor" red="0.40392156862745099" green="0.22745098039215686" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </progressView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p49-Oa-R8M">
-                                            <rect key="frame" x="11" y="525" width="25" height="11"/>
+                                            <rect key="frame" x="11" y="518.5" width="25" height="11"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="25" id="gSf-pa-Z9g"/>
                                             </constraints>
@@ -534,7 +530,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:35" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxa-Qo-SIs">
-                                            <rect key="frame" x="339" y="525" width="25" height="10"/>
+                                            <rect key="frame" x="339" y="519" width="25" height="10"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="25" id="iBa-dP-scA"/>
                                             </constraints>
@@ -542,18 +538,26 @@
                                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OSx-9r-2ty">
+                                            <rect key="frame" x="38" y="509" width="299" height="31"/>
+                                            <color key="minimumTrackTintColor" red="0.4039215686" green="0.2274509804" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="sliderValueChanged:forEvent:" destination="fTk-Fg-z9i" eventType="valueChanged" id="Ivz-rJ-O5d"/>
+                                            </connections>
+                                        </slider>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="ela-bK-1vs" secondAttribute="bottom" id="3ui-va-5gx"/>
-                                        <constraint firstItem="aYL-Jt-Ljt" firstAttribute="leading" secondItem="p49-Oa-R8M" secondAttribute="trailing" constant="4" id="52g-0A-JVZ"/>
-                                        <constraint firstItem="cxa-Qo-SIs" firstAttribute="centerY" secondItem="aYL-Jt-Ljt" secondAttribute="centerY" id="5px-Bk-QUG"/>
-                                        <constraint firstItem="aYL-Jt-Ljt" firstAttribute="leading" secondItem="BpU-Fj-fhG" secondAttribute="leading" constant="40" id="Fte-B3-P6d"/>
+                                        <constraint firstItem="ela-bK-1vs" firstAttribute="top" secondItem="OSx-9r-2ty" secondAttribute="bottom" id="66e-o5-bKM"/>
+                                        <constraint firstItem="cxa-Qo-SIs" firstAttribute="centerY" secondItem="OSx-9r-2ty" secondAttribute="centerY" id="8hP-nf-C18"/>
                                         <constraint firstAttribute="trailing" secondItem="ela-bK-1vs" secondAttribute="trailing" id="HzA-IM-Oue"/>
-                                        <constraint firstAttribute="trailing" secondItem="aYL-Jt-Ljt" secondAttribute="trailing" constant="40" id="aqC-n5-BFq"/>
-                                        <constraint firstItem="ela-bK-1vs" firstAttribute="top" secondItem="aYL-Jt-Ljt" secondAttribute="bottom" constant="8" id="iXf-bm-Xrb"/>
-                                        <constraint firstItem="p49-Oa-R8M" firstAttribute="centerY" secondItem="aYL-Jt-Ljt" secondAttribute="centerY" id="iql-4s-gYw"/>
+                                        <constraint firstItem="p49-Oa-R8M" firstAttribute="centerY" secondItem="OSx-9r-2ty" secondAttribute="centerY" id="LLb-jN-yla"/>
+                                        <constraint firstAttribute="trailing" secondItem="OSx-9r-2ty" secondAttribute="trailing" constant="40" id="LUa-DO-ZPc"/>
+                                        <constraint firstItem="cxa-Qo-SIs" firstAttribute="leading" secondItem="OSx-9r-2ty" secondAttribute="trailing" constant="4" id="dWP-iv-B70"/>
+                                        <constraint firstItem="OSx-9r-2ty" firstAttribute="leading" secondItem="p49-Oa-R8M" secondAttribute="trailing" constant="4" id="k1G-G4-Re0"/>
                                         <constraint firstItem="ela-bK-1vs" firstAttribute="leading" secondItem="BpU-Fj-fhG" secondAttribute="leading" id="knA-R3-Ha2"/>
-                                        <constraint firstItem="cxa-Qo-SIs" firstAttribute="leading" secondItem="aYL-Jt-Ljt" secondAttribute="trailing" constant="4" id="sAa-Aw-DgF"/>
+                                        <constraint firstItem="OSx-9r-2ty" firstAttribute="leading" secondItem="BpU-Fj-fhG" secondAttribute="leading" constant="40" id="uQE-md-bXZ"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="dark"/>
@@ -576,7 +580,7 @@
                     <connections>
                         <outlet property="currentTimeLabel" destination="p49-Oa-R8M" id="wYc-jL-JIT"/>
                         <outlet property="durationLabel" destination="cxa-Qo-SIs" id="3m8-0g-U4A"/>
-                        <outlet property="progressView" destination="aYL-Jt-Ljt" id="JCo-tp-9WW"/>
+                        <outlet property="slider" destination="OSx-9r-2ty" id="elx-kS-jU1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ker-F6-I3D" userLabel="First Responder" sceneMemberID="firstResponder"/>

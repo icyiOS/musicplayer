@@ -45,6 +45,11 @@ class Player {
         return player.isPlaying
     }
     
+    func setProgress(_ progress: Float) {
+        guard let player = player else { return }
+        player.currentTime = player.duration * Double(progress)
+    }
+    
     func play() {
         player?.play()
     }

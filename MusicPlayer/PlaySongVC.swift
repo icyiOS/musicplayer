@@ -12,10 +12,14 @@ class PlaySongVC: UIViewController {
 
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
-    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var slider: UISlider!
+    
+    var isSliderDragging = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        slider.setThumbImage(#imageLiteral(resourceName: "sliderThumb"), for: .normal)
         
         Player.main.prepareAndPlay()
         Player.main.play()
@@ -33,12 +37,28 @@ class PlaySongVC: UIViewController {
             sender.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
         }
     }
+    @IBAction func sliderValueChanged(_ sender: UISlider, forEvent event: UIEvent) {
+        if let touchEvent = event.allTouches?.first {
+            switch touchEvent.phase {
+            case .began:
+                isSliderDragging = true
+            case .ended:
+                let progress = sender.value
+                Player.main.setProgress(progress)
+                isSliderDragging = false
+            default:
+                break
+            }
+        }
+    }
 }
 
 extension PlaySongVC: PlayerDelegate {
     
     func player(_ player: Player, onProgress progress: Float) {
-        progressView.progress = progress
+        if !isSliderDragging {
+            slider.value = progress
+        }
     }
     
     func player(_ player: Player, onTime currentTime: Int) {
