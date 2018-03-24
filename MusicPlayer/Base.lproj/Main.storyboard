@@ -396,10 +396,10 @@
             </objects>
             <point key="canvasLocation" x="1362" y="-667"/>
         </scene>
-        <!--View Controller-->
+        <!--Play SongVC-->
         <scene sceneID="TFh-Ew-3PW">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="fTk-Fg-z9i" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="fTk-Fg-z9i" customClass="PlaySongVC" customModule="MusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v3M-Z7-M05">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -424,7 +424,10 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUi-iz-EGb">
                                                     <rect key="frame" x="171.5" y="16" width="32" height="32"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal" image="play"/>
+                                                    <state key="normal" image="pause"/>
+                                                    <connections>
+                                                        <action selector="playButtonPressed:" destination="fTk-Fg-z9i" eventType="touchUpInside" id="cSy-5C-fqt"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19d-Gd-yUf">
                                                     <rect key="frame" x="230" y="16" width="32" height="32"/>
@@ -521,7 +524,7 @@
                                             <rect key="frame" x="40" y="529" width="295" height="2"/>
                                             <color key="progressTintColor" red="0.40392156862745099" green="0.22745098039215686" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </progressView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p49-Oa-R8M">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p49-Oa-R8M">
                                             <rect key="frame" x="11" y="525" width="25" height="11"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="25" id="gSf-pa-Z9g"/>
@@ -530,7 +533,7 @@
                                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxa-Qo-SIs">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:35" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxa-Qo-SIs">
                                             <rect key="frame" x="339" y="525" width="25" height="10"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="25" id="iBa-dP-scA"/>
@@ -570,6 +573,11 @@
                         <viewLayoutGuide key="safeArea" id="BYI-jH-YVU"/>
                     </view>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="currentTimeLabel" destination="p49-Oa-R8M" id="wYc-jL-JIT"/>
+                        <outlet property="durationLabel" destination="cxa-Qo-SIs" id="3m8-0g-U4A"/>
+                        <outlet property="progressView" destination="aYL-Jt-Ljt" id="JCo-tp-9WW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ker-F6-I3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -676,7 +684,7 @@
         <image name="me" width="30" height="30"/>
         <image name="music" width="30" height="30"/>
         <image name="next" width="32" height="32"/>
-        <image name="play" width="32" height="32"/>
+        <image name="pause" width="32" height="32"/>
         <image name="playlist" width="32" height="32"/>
         <image name="previous" width="32" height="32"/>
         <image name="repeat" width="32" height="32"/>
